@@ -1,0 +1,108 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: Helvetica;
+}
+
+/* give cover image from (/assets/images/home_bg.png) to .hero div */
+
+.hero_image {
+	background-image: url(/assets/images/home_bg.png);
+	background-size: cover;
+	background-position: center;
+	height: 100vh;
+	width: 100vw;
+	position: relative;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.hero_contents {
+	color: #ffffff;
+	text-align: center;
+	padding: 0 20%;
+}
+
+.hero_contents h1 {
+	padding: 40px 0px;
+	font-size: 3.5em;
+}
+
+.hero_contents p {
+	font-size: 1.5em;
+	line-height: 1.5;
+}
+
+.hero_contents hr {
+	margin: 0 auto;
+	width: 300px;
+	border: 1px solid #ffffff;
+}
+
+.getting_started {
+	display: flex;
+	flex-direction: row;
+	padding: 5% 8%;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.getting_started .content {
+	width: 45%;
+	padding: 0 5%;
+	line-height: 1.5;
+	font-size: 1.2em;
+}
+.getting_started span {
+	color: #1cacf4;
+}
+
+.getting_started p {
+	padding: 4% 0;
+}
+
+.getting_started .buttons {
+	list-style: none;
+	display: inline-block;
+	padding: 2% 0;
+}
+
+.getting_started a {
+	text-decoration: none;
+	margin-right: 20px;
+}
+
+.card_container {
+	display: flex;
+	flex-direction: row;
+	padding: 5% 8%;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.card {
+	width: 45%;
+	padding: 4% 4%;
+	margin: 0 5%;
+	line-height: 1.5;
+	font-size: 1.2em;
+	background-color: #f9f9f9;
+	box-shadow: 0px 55px 55px rgba(0, 0, 0, 0.25);
+	border-radius: 20px;
+	margin-bottom: 5%;
+}
+
+.card h1 {
+	font-size: 1.2em;
+	padding: 3% 0;
+}
+
+.card p {
+	padding: 5% 0;
+}
+
+.card a {
+	text-decoration: none;
+}
