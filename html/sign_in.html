@@ -10,17 +10,40 @@
     <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="/assets/css/header_footer.css">
-    <link rel="stylesheet" href="/assets/css/homepage.css">
+    <link rel="stylesheet" href="/assets/css/sign_in.css">
     <script src="/scripts/header_footer.js"></script>
 
 </head>
 
 <body>
 
-
     <chimm-header />
-    <chimm-footer />
 
+    <div class="form">
+        <h1>Sign In</h1>
+
+        <hr class="hr1">
+
+        <form>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="submit" value="Sign In">
+        </form>
+
+        <div class="or">
+            <hr class="hr2"><span>or</span>
+            <hr class="hr2">
+        </div>
+
+        <button type="submit" class="google-button"><img src="/assets//images/google_icon.png" alt="Google">
+            <p>Sign in
+                with Google</p>
+        </button>
+
+
+    </div>
+
+    <chimm-footer />
 
 </body>
 

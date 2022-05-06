@@ -1,0 +1,119 @@
+/* center h1 over the form and stylize it */
+h1 {
+	text-align: center;
+	font-size: 2em;
+	padding-top: 3%;
+}
+
+.right {
+	display: flex;
+	justify-content: flex-end;
+	margin-bottom: 3%;
+}
+
+.filter-button {
+	background-color: #1e3f66;
+	color: white;
+	padding: 15px 20px;
+	border: none;
+	cursor: pointer;
+	margin-left: 87.4%;
+	margin-bottom: 1.5%;
+}
+
+.filter {
+	width: 20%;
+	padding: 0 10px 30px 10px;
+	background: #f9f9f9;
+	align-items: center;
+	margin-right: 5%;
+}
+
+.filter_form {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.close {
+	margin-left: 80%;
+	margin-bottom: 5%;
+	padding-top: 30px;
+}
+
+.filter input {
+	width: 80%;
+	clear: both;
+	margin: 0 0 20px;
+	padding: 10px 15px;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+}
+
+.filter input[type="submit"] {
+	margin-bottom: 2%;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	background: #1e3f66;
+	color: #fff;
+	height: 40px;
+}
+
+.chimms {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 5%;
+}
+
+.card {
+	box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.2);
+	border-radius: 20px;
+	background: #fff;
+	color: #000;
+	margin: 0 2% 4% 2%;
+}
+
+.card_images {
+	width: 20%;
+	margin: 0 10px 30px 10px;
+	background: #f9f9f9;
+	align-items: center;
+	margin-right: 5%;
+}
+
+.card_body {
+	border-radius: 0 0 20px 20px;
+	background-color: #1e3f66;
+	color: #ffffff;
+	padding: 8% 8%;
+}
+
+.card_images img {
+	width: 100%;
+	height: auto;
+	border-radius: 10px;
+}
+
+.card_body h3 {
+	font-size: 1.5em;
+	padding: 0 0 15px 0;
+}
+
+.location {
+	font-weight: lighter;
+}
+
+.card_body p {
+	font-size: 1em;
+	padding: 3px 0;
+}
+
+.card:hover {
+	box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.9);
+	transform: scale(1.1);
+	transition: all 0.3s ease-in-out;
+}

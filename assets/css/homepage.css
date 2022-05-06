@@ -106,3 +106,98 @@
 .card a {
 	text-decoration: none;
 }
+
+.houses {
+	margin: 4% 8%;
+	font-size: 2.5em;
+}
+
+.chimms {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 5%;
+}
+
+.chimm_card {
+	box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.2);
+	border-radius: 20px;
+	background: #fff;
+	color: #000;
+	margin: 0 2% 4% 2%;
+}
+
+.card_images {
+	width: 20%;
+	margin: 0 10px 30px 10px;
+	background: #f9f9f9;
+	align-items: center;
+	margin-right: 5%;
+}
+
+.card_body {
+	border-radius: 0 0 20px 20px;
+	background-color: #1e3f66;
+	color: #ffffff;
+	padding: 8% 8%;
+}
+
+.card_images img {
+	width: 100%;
+	height: auto;
+	border-radius: 10px;
+}
+
+.card_body h3 {
+	font-size: 1.5em;
+	padding: 0 0 15px 0;
+}
+
+.location {
+	font-weight: lighter;
+}
+
+.card_body p {
+	font-size: 1em;
+	padding: 3px 0;
+}
+
+.chimm_card:hover {
+	box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.9);
+	transform: scale(1.1);
+	transition: all 0.3s ease-in-out;
+}
+
+.nav_arrows h1 {
+	text-align: center;
+}
+
+.nav_arrows h1 i {
+	padding: 12px;
+}
+
+.nav_arrows h1 i:hover {
+	font-weight: bold;
+	font-size: 1.1em;
+	transition: all 0.3s ease-in-out;
+}
+
+.view_more_link {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+.view_more_link a {
+	padding: 50px;
+	text-decoration: none;
+	color: #1e3f66;
+	font-size: 1.3em;
+}
+
+.view_more_link a:hover {
+	font-weight: bold;
+	font-size: 1.5em;
+	transition: all 0.3s ease-in-out;
+}

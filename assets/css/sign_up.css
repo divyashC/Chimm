@@ -1,0 +1,88 @@
+.form {
+	width: 20%;
+	margin: 5% auto;
+	padding: 45px;
+	text-align: center;
+	background: #f9f9f9;
+	border-radius: 50px;
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.form h1 {
+	margin: 0 0 20px;
+}
+
+.form .hr1 {
+	margin: 0 0 20px;
+	border: none;
+	border-bottom: 1px solid #ddd;
+	clear: both;
+}
+
+.form input,
+select {
+	width: 80%;
+	clear: both;
+	margin: 0 0 20px;
+	padding: 10px 15px;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+}
+
+.form select {
+	width: 90%;
+}
+
+.form label {
+	font-size: 0.8em;
+	margin-bottom: 2px;
+}
+
+.form input[type="submit"] {
+	margin: 0 0 20px;
+	padding: 10px 15px;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	background: #1e3f66;
+	color: #fff;
+	height: 40px;
+}
+
+.form input[type="date"] {
+	color: #757575;
+}
+
+.dimmed {
+	color: #757575;
+}
+
+.or {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-bottom: 20px;
+}
+
+.form .or .hr2 {
+	border-bottom: 1px solid #ddd;
+	clear: both;
+	width: 40%;
+	margin: 0 10px;
+}
+
+.form button {
+	margin: 0 0 20px;
+	padding: 10px;
+	border: none;
+	background: #ffffff;
+	width: 80%;
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+	border-radius: 10px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.form img {
+	padding-right: 20px;
+}
