@@ -52,11 +52,32 @@ header .button li {
 	font-size: 0.9em;
 }
 
+.sign_in:hover {
+	color: #1e3f66;
+	background: #ffffff;
+	border: 1px solid #1e3f66;
+	border-radius: 8px;
+	padding: 8px 18px;
+	align-items: center;
+	font-weight: bold;
+	font-size: 0.9em;
+}
+
 .sign_up {
 	color: #1e3f66;
 	border: 1px solid #1e3f66;
 	border-radius: 8px;
 	padding: 8px 18px;
+	align-items: center;
+	font-weight: bold;
+	font-size: 0.9em;
+}
+
+.sign_up:hover {
+	background: #1e3f66;
+	color: #ffffff;
+	border-radius: 8px;
+	padding: 10px 20px;
 	align-items: center;
 	font-weight: bold;
 	font-size: 0.9em;
@@ -209,12 +230,4 @@ footer p {
 
 .link_effect:hover::before {
 	width: 100%;
-}
-
-.button_effect {
-	transition-duration: 00.25s;
-}
-
-.button_effect:hover {
-	transform: scale(0.9);
 }

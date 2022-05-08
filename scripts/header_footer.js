@@ -25,13 +25,13 @@ class CommonFooter extends HTMLElement {
 		this.innerHTML = `
 		<footer>
 			<div class="button_container">
-				<div class="sign_up_section">
+				<div class="sign_in_section">
 					<span>Already have an account?</span>
 					<h2>Start renting</h2>
 					<a href="sign_in.html">Sign In</a>
 				</div>
 				<hr>
-				<div class="sign_in_section">
+				<div class="sign_up_section">
 					<span>Want to rent a House?</span>
 					<h2>Let’s get started</h2>
 					<a href="sign_up.html">Sign Up</a>

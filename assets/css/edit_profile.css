@@ -1,0 +1,168 @@
+.dashboard {
+	background-color: #ced4da;
+}
+
+.dashboard_header {
+	text-align: left;
+	margin-left: 50px;
+	padding-top: 50px;
+}
+
+.dashboard_header h2 {
+	font-size: 2.2em;
+	font-weight: lighter;
+}
+
+.dashboard_nav_items {
+	padding-left: 50px;
+}
+
+.dashboard_nav_items ul {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	list-style: none;
+	padding-top: 50px;
+	padding-bottom: 20px;
+}
+
+.dashboard_nav_items ul li {
+	padding-right: 20px;
+}
+
+.dashboard_nav_items ul li a {
+	text-decoration: none;
+	color: #1e3f66;
+	font-size: 1.2em;
+	padding-bottom: 15px;
+}
+
+.dashboard_nav_items .active {
+	border-bottom: 4px solid #1e3f66;
+}
+
+.container {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	margin: 5%;
+}
+
+.hr_one {
+	margin: 0 100px;
+	background-color: #1e3f66;
+	border: none;
+	height: 250px;
+	width: 3px;
+}
+
+.left {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.left h2 {
+	font-size: 1.5em;
+	font-weight: lighter;
+}
+
+.left img {
+	height: 100px;
+	width: 100px;
+	padding: 40px 0;
+}
+
+.left p {
+	font-size: 1.5em;
+	font-weight: bold;
+	padding-bottom: 40px;
+}
+
+.upload_avatar a {
+	margin: 0 0 20px;
+	padding: 10px 20px;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	background: #1e3f66;
+	color: #fff;
+	height: 40px;
+	text-decoration: none;
+}
+
+.right {
+	width: 40%;
+}
+
+.right_header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.right_header h2 {
+	font-size: 1.5em;
+	font-weight: lighter;
+}
+
+.buttons {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.cancel_button a {
+	margin: 0 8px;
+	padding: 8px 15px;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	background: #1e3f66;
+	color: #fff;
+	height: 40px;
+	text-decoration: none;
+}
+
+.save_button a {
+	text-decoration: none;
+	color: #1e3f66;
+	border: 1px solid #1e3f66;
+	border-radius: 10px;
+	padding: 8px 15px;
+	align-items: center;
+	font-weight: bold;
+}
+
+.hr_two {
+	margin: 20px 0 50px;
+	background-color: #1e3f66;
+	border: none;
+	height: 3px;
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.form input {
+	width: 300px;
+	clear: both;
+	margin: 0 10px 20px;
+	padding: 15px 15px;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+}
+
+.form label {
+	padding-left: 15px;
+}
+
+.form input[type="date"] {
+	margin-top: 15px;
+}

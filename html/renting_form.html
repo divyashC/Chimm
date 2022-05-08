@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Chimm - Rent A Flat</title>
+    <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="/assets/css/header_footer.css">
+    <link rel="stylesheet" href="/assets/css/renting_form.css">
+    <!-- bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
+    <script src="/scripts/header_footer.js"></script>
+
+</head>
+
+<body>
+
+    <chimm-header />
+
+    <div class="container">
+        <div class="form">
+
+            <form>
+                <h2>Tenant Details</h2>
+                <hr>
+                <input type="text" id="tenant_name" placeholder="Name">
+                <input type="text" id="tenant_number" placeholder="Number">
+                <input type="email" id="tenant_email" placeholder="Email Address">
+                <input type="text" id="tenant_occupation" placeholder="Occupation">
+                <select name="gender">
+                    <option class="dimmed" disabled selected>Select Gender *</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+                <input type="numnber" id="tenant_age" placeholder="Age">
+                <input type="text" id="tenant_heads" placeholder="Total Heads Residing">
+
+                <h2 style="margin-top: 50px;">Booking Information</h2>
+                <hr>
+                <label for="date">Enter Booking Date</label>
+                <input type="date" id="booking_date" placeholder="Booking Date">
+                <textarea id="additional_info" placeholder="Additional Information"></textarea>
+                <div class="toc">
+                    <input type="checkbox" id="terms">
+                    <label for="terms">I agree to the <a href="toc.html">Terms and Conditions</a></label>
+                </div>
+                <input type="submit" value="Done">
+
+            </form>
+
+        </div>
+
+        <div class="summary">
+            <div class="summary_card">
+                <div class="house_summary">
+                    <div class="section_1">
+                        <img src="/assets/images/house_summary_image.png" alt="House Image">
+                    </div>
+                    <div class="section_2">
+                        <h3>Lorem Ipsum</h3>
+                        <p>Lorem ipsum dolor sit amet</p>
+                        <p class="location"><i class="bi bi-geo-alt"></i> Location</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="flat_summary">
+                    <h3>Flat Summary</h3>
+                    <table>
+                        <tr class="tsa">
+                            <td class="tsa-title value_left">Total Surface Area</td>
+                            <td class="tsa-value value_right">000000 sq. ft</td>
+                        </tr>
+                        <tr class="room">
+                            <td class="rooms-title value_left">Rooms</td>
+                            <td class="rooms-value value_right">3 BHK</td>
+                        </tr>
+                        <tr class="toilet_bathroom">
+                            <td class="toilet_bathroom_title value_left">Toilet / Bathroom</td>
+                            <td class="toilet_bathroom_value value_right">2</td>
+                        </tr>
+                        <tr class="balconies">
+                            <td class="balconies_title value_left">Balconies</td>
+                            <td class="balconies_value value_right">3</td>
+                        </tr>
+                        <tr class="parking">
+                            <td class="parking_title value_left">Parking</td>
+                            <td class="parking_value value_right">Yes</td>
+                        </tr>
+                        <tr class="floor">
+                            <td class="floor_title value_left">Floor</td>
+                            <td class="floor_value value_right">Ground Floor</td>
+                        </tr>
+                        <tr class="road">
+                            <td class="road_title value_left">Road Access</td>
+                            <td class="road_value value_right">Yes</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <hr>
+
+                <div class="rent">
+                    <table>
+                        <tr>
+                            <td class="rent_title">
+                                <h3>Total Rent Per Month</h3>
+                            </td>
+                            <td class="rent_value">
+                                <h3>Nu. 10000</h3>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <chimm-footer />
+
+</body>
+
+</html>

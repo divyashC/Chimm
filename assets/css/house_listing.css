@@ -1,0 +1,178 @@
+.images {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.images img {
+	margin: 5%;
+}
+
+.main_content {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: flex-start;
+	margin-bottom: 5%;
+}
+
+.left {
+	margin-right: 6%;
+	width: 35%;
+}
+
+.right {
+	margin-left: 6%;
+	width: 20%;
+}
+
+.house_name h1 {
+	padding-bottom: 5px;
+}
+
+.bar {
+	font-size: 1.2em;
+	font-weight: lighter;
+}
+
+hr {
+	margin: 6% 0;
+}
+
+.detailed_info ul li {
+	list-style: none;
+	display: flex;
+	flex-direction: row;
+}
+
+.icon {
+	margin: 2%;
+}
+
+.info {
+	margin: 2%;
+}
+
+.info .info_title {
+	font-size: 1.2em;
+}
+
+.detailed_info .info p {
+	font-size: 0.9em;
+	font-weight: lighter;
+}
+
+.owner_title {
+	margin-bottom: 4%;
+}
+
+.owners_details {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.owner {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.owner .profile {
+	margin-left: 20px;
+}
+
+.owner .details {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-left: 20px;
+	line-height: 1.5em;
+	color: #424242;
+}
+
+.contact_button {
+	margin: auto 0;
+}
+
+.contact_button a {
+	text-decoration: none;
+	color: #1e3f66;
+	border: 1px solid #1e3f66;
+	border-radius: 8px;
+	padding: 8px 18px;
+	align-items: center;
+	font-weight: bold;
+	font-size: 0.9em;
+}
+
+.contact_button a:hover {
+	background: #1e3f66;
+	color: #ffffff;
+	border-radius: 8px;
+	padding: 10px 20px;
+	align-items: center;
+	font-weight: bold;
+	font-size: 0.9em;
+}
+
+.right {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.summary_card {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	border-radius: 40px;
+	background-color: #fafafa;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+	padding: 30px 40px;
+}
+
+.section_1 h3,
+.section_1 p {
+	margin: 8px 0;
+}
+
+.section_1 .location {
+	color: #636363;
+}
+
+.flat_summary h3 {
+	margin-bottom: 20px;
+}
+
+table {
+	width: 100%;
+}
+
+td {
+	white-space: nowrap;
+	padding: 2px 20px;
+}
+
+td.value_right {
+	text-align: right;
+	color: #505050;
+}
+
+.rent_button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #1e3f66;
+	border-radius: 8px;
+	width: 130%;
+	margin-top: 40px;
+}
+
+.rent_button a {
+	text-decoration: none;
+	color: #ffffff;
+	font-weight: bold;
+	padding: 15px 20px;
+}
