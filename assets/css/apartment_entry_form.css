@@ -40,3 +40,126 @@
 .dashboard_nav_items .active {
 	border-bottom: 4px solid #1e3f66;
 }
+
+.form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 100px 50px;
+}
+
+form {
+	padding: 50px;
+	background: #f9f9f9;
+	border-radius: 50px;
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+	width: 25%;
+}
+
+.form_container .top,
+.form_container .bottom {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.form_container .top h2 {
+	margin: 0 0 10px;
+}
+
+.form_container .bottom h2 {
+	margin: 40px 0 10px;
+}
+
+hr {
+	margin: 20px 0 50px;
+	background-color: #1e3f66;
+	border: none;
+	height: 2px;
+	width: 80%;
+}
+
+.form input,
+textarea {
+	width: 300px;
+	clear: both;
+	margin: 0 10px 20px;
+	padding: 15px 15px;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+}
+
+.form label {
+	padding-bottom: 10px;
+}
+
+.parking,
+.road {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	width: 100%;
+	padding: 5px;
+	margin-left: 70px;
+	color: #5b5b5b;
+}
+
+.parking input,
+.road input {
+	margin: 10px;
+	width: 16px;
+	height: 16px;
+}
+
+.parking label,
+.road label {
+	margin: 0;
+	padding: 0 20px 0 0;
+	font-size: 1.1em;
+	color: #000000;
+}
+
+.road {
+	padding-bottom: 20px;
+}
+
+.form textarea {
+	height: 100px;
+}
+.toc {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.toc input {
+	height: 20px;
+	width: 20px;
+	margin-top: 20px;
+	margin-right: 20px;
+}
+
+.toc label {
+	margin: 0;
+	padding: 0;
+	white-space: nowrap;
+}
+
+.toc label a {
+	color: #1e3f66;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.form input[type="submit"] {
+	margin: 20px 0 20px 0;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	background: #1e3f66;
+	color: #fff;
+	height: 40px;
+}

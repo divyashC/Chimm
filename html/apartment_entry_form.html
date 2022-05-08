@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Chimm - Terms & Conditions</title>
+    <title>Chimm - Apartment Entry</title>
     <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="/assets/css/header_footer.css">
-    <link rel="stylesheet" href="/assets/css/apartment_listing.css">
+    <link rel="stylesheet" href="/assets/css/apartment_entry_form.css">
     <!-- bootstrap icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 
@@ -33,6 +33,53 @@
                 <li><a class="active" href="apartment_listing.html">Apartment Listing</a></li>
             </ul>
         </div>
+    </div>
+
+    <div class="form">
+        <form>
+            <div class="form_container">
+                <div class="top">
+                    <h2>Owner's Details</h2>
+                    <hr>
+                    <input type="text" id="name" placeholder="Name">
+                    <input type="email" id="email" placeholder="Email">
+                    <input type="text" id="phone" placeholder="Phone Number">
+                    <label for="photo">Proof of Ownership</label>
+                    <input type="file" id="file" placeholder="Proof of Ownership">
+                </div>
+                <div class="bottom">
+                    <h2>House Details</h2>
+                    <hr>
+                    <input type="text" id="total_surface_area" placeholder="Total Surface Area">
+                    <input type="number" id="total_rooms" placeholder="Number of Rooms">
+                    <input type="number" id="toilet_bathrooms" placeholder="No. of Toilets & Bathrooms">
+                    <input type="number" id="number_of_balconies" placeholder="Number of Balconies">
+                    <input type="text" id="floor" placeholder="Floor e.g. G, 1st, 2nd">
+                    <div class="parking">
+                        <label for="parking">Parking</label>
+                        <input type="radio" id="parking" name="parking" value="yes">Yes
+                        <input type="radio" id="parking" name="parking" value="no">No
+                    </div>
+                    <div class="road">
+                        <label for="road_access">Road Access</label>
+                        <input type="radio" id="road_access" name="road_access" value="yes">Yes
+                        <input type="radio" id="road_access" name="road_access" value="no">No
+                    </div>
+                    <input type="number" id="rent_per_month" placeholder="Rent Per Month in Nu. e.g 10000">
+                    <input type="text" id="address" placeholder="Address">
+                    <input type="text" id="building_name" placeholder="Building Name">
+                    <input type="text" id="flat_number" placeholder="Flat Number">
+                    <textarea id="additional_info" placeholder="Additional Information"></textarea>
+                    <label for="file">Upload Minimum 3 Photos</label>
+                    <input type="file" id="file" placeholder="Upload 3 Photos" multiple="multiple">
+                    <div class="toc">
+                        <input type="checkbox" id="terms">
+                        <label for="terms">I agree to the <a href="toc.html">Terms and Conditions</a></label>
+                    </div>
+                    <input type="submit" value="Done">
+                </div>
+            </div>
+        </form>
     </div>
 
     <chimm-footer />
