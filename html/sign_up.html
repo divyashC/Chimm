@@ -15,7 +15,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
 
     <script src="/scripts/header_footer.js"></script>
-    <script src="/scripts/sign_up.js"></script>
 
 </head>
 
@@ -24,36 +23,36 @@
     <chimm-header />
 
     <div class="form">
-        <h1>Sign Up</h1>
 
-        <hr class="hr1">
+        <form id="sign_up_form">
+            <h1>Sign Up</h1>
 
-        <form>
-            <input type="email" placeholder="Email *" required>
+            <hr class="hr1">
+
+            <input id="email" type="email" placeholder="Email *" required>
             <input id="phone_no" type="tel" placeholder="Phone Number *" required />
-            <input type="text" placeholder="Full Name *" required>
+            <input id="full_name" type="text" placeholder="Full Name *" required>
             <br><label for="date">Enter DOB</label>
-            <input type="date" placeholder="Date of Birth *" required>
-            <select name="gender">
+            <input id="dob" type="date" placeholder="Date of Birth *" required>
+            <select id="gender" name="gender">
                 <option class="dimmed" disabled selected>Select Gender *</option>
                 <option value="male">Male</option>
                 <option value="female">Female</option>
             </select>
-            <input type="password" placeholder="Create Password *" required>
-            <input type="password" placeholder="Re-enter Password *" required><br>
+            <input id="password" type="password" placeholder="Create Password *" required>
+            <input id="retype_password" type="password" placeholder="Re-enter Password *" required><br>
             <label for="photo">Choose Profile Picture</label>
             <input type="file" id="photo" accept="image/*" />
-            <input type="submit" value="Sign Up">
-
+            <input type="submit" value="Sign Up" class="sign_up_btn">
 
         </form>
 
-        <div class="or">
+        <div class=" or">
             <hr class="hr2"><span>or</span>
             <hr class="hr2">
         </div>
 
-        <button type="submit" class="google-button"><img src="/assets//images/google_icon.png" alt="Google">
+        <button type="submit" class="google_button"><img src="/assets//images/google_icon.png" alt="Google">
             <p>Sign up
                 with Google</p>
         </button>
@@ -63,9 +62,12 @@
 
     <chimm-footer />
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
-    <script src="/scripts/sign_up.js"></script>
-
 </body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+<script src="/scripts/sign_up.js"></script>
 
 </html>
