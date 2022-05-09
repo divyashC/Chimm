@@ -20,9 +20,9 @@ firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
 const database = firebase.database();
 
-const sign_up_form = document.getElementById("sign_up_form");
+const sign_up = document.getElementById("sign_up_form");
 
-sign_up_form.addEventListener("submit", (e) => {
+sign_up.addEventListener("submit", (e) => {
 	e.preventDefault();
 
 	const email = document.getElementById("email").value;
@@ -45,13 +45,11 @@ sign_up_form.addEventListener("submit", (e) => {
 
 	auth
 		.createUserWithEmailAndPassword(email, password)
-		.then(function () {
+		.then(() => {
 			var user = auth.currentUser;
-			alert("Signed Up successfully");
 
 			var database_ref = database.ref();
 
-			// Create User data
 			var user_data = {
 				user_id: user.uid,
 				email: email,
@@ -63,16 +61,20 @@ sign_up_form.addEventListener("submit", (e) => {
 				last_login: Date.now(),
 			};
 			database_ref.child("users/" + user.uid).set(user_data);
+
+			alert("Signed Up successfully");
+
+			setTimeout(() => {
+				sign_up.reset();
+			}, 1000);
+
+			window.location.href = "../index.html";
 		})
-		.catch(function (error) {
+		.catch((error) => {
 			var error_code = error.code;
 			var error_message = error.message;
 			alert(error_code + " " + error_message);
 		});
-
-	setTimeout(function () {
-		sign_up_form.reset();
-	}, 3000);
 });
 
 const compare_password = (password, retype_password) => {

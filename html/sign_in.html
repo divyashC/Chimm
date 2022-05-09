@@ -24,9 +24,10 @@
 
         <hr class="hr1">
 
-        <form>
-            <input type="email" name="email" placeholder="Email" required>
-            <input type="password" name="password" placeholder="Password" required>
+        <form id="sign_in_form">
+            <input id="email" type="email" name="email" placeholder="Email" required>
+            <input id="password" type="password" name="password" placeholder="Password" required>
+            <!-- <input type="submit" value="Sign In" onclick="window.open('../index.html', '_self')"> -->
             <input type="submit" value="Sign In">
         </form>
 
@@ -46,5 +47,10 @@
     <chimm-footer />
 
 </body>
+
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+<script src="/scripts/sign_in.js"></script>
 
 </html>
