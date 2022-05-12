@@ -1,11 +1,11 @@
 const firebaseConfig = {
-	apiKey: "AIzaSyB3wWKGE4qmRph9rSu7v6k4x44noqy11pE",
-	authDomain: "chimm-ef62e.firebaseapp.com",
-	databaseURL: "https://chimm-ef62e-default-rtdb.firebaseio.com",
-	projectId: "chimm-ef62e",
-	storageBucket: "chimm-ef62e.appspot.com",
-	messagingSenderId: "758715245148",
-	appId: "1:758715245148:web:623f3425d60f61e0963c99",
+	apiKey: "AIzaSyCi9rsoRJogatOKu_XT7VA1H26Ccv4Y4uQ",
+	authDomain: "chimm-4b7b0.firebaseapp.com",
+	databaseURL: "https://chimm-4b7b0-default-rtdb.firebaseio.com",
+	projectId: "chimm-4b7b0",
+	storageBucket: "chimm-4b7b0.appspot.com",
+	messagingSenderId: "807500885561",
+	appId: "1:807500885561:web:34973c28f4717935f7e7e8",
 };
 
 // Initialize Firebase
@@ -38,9 +38,11 @@ sign_in.addEventListener("submit", (e) => {
 
 			setTimeout(() => {
 				sign_in.reset();
-			}, 1000);
+			}, 2000);
 
-			window.location.href = "../index.html";
+			setTimeout(() => {
+				window.location.href = "/html/profile.html";
+			}, 2000);
 		})
 		.catch((error) => {
 			var error_code = error.code;

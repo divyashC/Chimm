@@ -14,6 +14,16 @@ class CommonHeader extends HTMLElement {
 				<li><a class="sign_in" href="sign_in.html">Sign In</a></li>
 				<li><a class="sign_up" href="sign_up.html">Sign Up</a></li>
 			</ul>
+        	<div id="profile_group" class="profile hidden">
+            	<div onclick="dropdown()" class="profile_container">
+					<p id="username" >Username</p>
+					<img id="profile_picture_image" class="profile_picture" src="/assets/images/profile_picture.png" alt="Profile Picture">
+				</div>
+				<div class="drop_down" id="drop_down_menu">
+					<a href="profile.html">Profile</a>
+					<a id="sign_out_button" href="/index.html">Sign Out</a>
+				</div>
+        	</div>
     	</header>`;
 	}
 }
