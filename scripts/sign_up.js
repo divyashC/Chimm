@@ -19,6 +19,7 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
 const database = firebase.database();
+const storage = firebase.storage();
 
 const sign_up = document.getElementById("sign_up_form");
 
@@ -32,8 +33,7 @@ sign_up.addEventListener("submit", (e) => {
 	const gender = document.getElementById("gender").value;
 	const password = document.getElementById("password").value;
 	const retype_password = document.getElementById("retype_password").value;
-	const photo = {};
-	photo = document.getElementById("photo").files[0];
+	var photo = document.getElementById("photo").files[0];
 
 	if (compare_password(password, retype_password) == false) {
 		alert("Password does not match!!");
@@ -50,6 +50,7 @@ sign_up.addEventListener("submit", (e) => {
 			var user = auth.currentUser;
 
 			var database_ref = database.ref();
+			var storage_ref = storage.ref();
 
 			var user_data = {
 				user_id: user.uid,
@@ -62,22 +63,18 @@ sign_up.addEventListener("submit", (e) => {
 				last_login: Date.now(),
 			};
 
-			firebase
-				.storage()
-				.ref("users/" + user.uid + "/profile")
-				.put(photo);
-
 			database_ref.child("users/" + user.uid).set(user_data);
+			storage_ref.child("users/" + user.uid + "/profilePicture").put(photo);
 
 			alert("Signed Up successfully");
 
 			setTimeout(() => {
 				sign_up.reset();
-			}, 2000);
+			}, 4000);
 
 			setTimeout(() => {
 				window.location.href = "/html/profile.html";
-			}, 2000);
+			}, 4500);
 		})
 		.catch((error) => {
 			var error_code = error.code;
