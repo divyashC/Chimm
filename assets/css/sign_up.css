@@ -76,19 +76,15 @@ select {
 	margin: 0 10px;
 }
 
-.google_button {
-	margin: 0 0 20px;
-	padding: 10px;
+.form .sign_in_redirect a {
+	text-decoration: none;
+	color: #1e3f66;
+	padding: 10px 45px;
 	border: none;
 	background: #ffffff;
-	width: 80%;
+	width: 100%;
 	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 	border-radius: 10px;
-	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-}
-
-.form img {
-	padding-right: 20px;
 }

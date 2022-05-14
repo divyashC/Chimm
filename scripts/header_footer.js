@@ -12,7 +12,7 @@ class CommonHeader extends HTMLElement {
 			</nav>
 			<ul class="button">
 				<li><a class="sign_in" href="sign_in.html">Sign In</a></li>
-				<li><a class="sign_up" href="sign_up.html">Sign Up</a></li>
+				<!-- <li><a class="sign_up button_effect" href="sign_up.html">Sign Up</a></li> -->
 			</ul>
         	<div id="profile_group" class="profile hidden">
             	<div onclick="dropdown()" class="profile_container">
