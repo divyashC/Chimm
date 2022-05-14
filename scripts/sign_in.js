@@ -51,11 +51,11 @@ sign_in.addEventListener("submit", (e) => {
 
 			setTimeout(() => {
 				sign_in.reset();
-			}, 500);
+			}, 2000);
 
 			setTimeout(() => {
 				window.location.href = "/html/profile.html";
-			}, 1000);
+			}, 2500);
 		})
 		.catch((error) => {
 			var error_code = error.code;

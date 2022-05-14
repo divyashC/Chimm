@@ -15,6 +15,6 @@ if (ls_user_data.phone_no != null) {
 	phone.innerHTML = `+975 ${ls_user_data.phone_no}`;
 }
 
-if (ls_user_data.profilePicture == null) {
+if (ls_user_data.profilePicture != null) {
 	dashboard_profile_container.src = ls_user_data.profilePicture;
 }
