@@ -25,10 +25,10 @@
 
     <h1>Marketplace</h1>
 
-    <button class="filter-button">Search & Filter</button>
+    <button id="search_and_filter_btn" class="filter-button">Search & Filter</button>
     <div class="right">
-        <div class="filter">
-            <h1 class="close"><i class="bi bi-x-circle"></i> </h1>
+        <div class="filter hidden" id="search_and_filter_body">
+            <h1 class="close" id="close_btn"><i class="bi bi-x-circle"></i> </h1>
             <form class="filter_form">
                 <input type="number" placeholder="No of Rooms" name="no_of_rooms">
                 <input type="number" placeholder="Min Price" name="min_price">
@@ -219,5 +219,6 @@
 <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-storage.js"></script>
 <script src="/scripts/script.js"></script>
+<script src="/scripts/marketplace.js"></script>
 
 </html>
