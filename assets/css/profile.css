@@ -54,6 +54,10 @@
 	display: block;
 	top: 450px;
 	left: 50%;
+	width: 200px;
+	height: 200px;
+	border: #1e3f66 solid 5px;
+	border-radius: 50%;
 	transform: translate(-50%, -50%);
 }
 

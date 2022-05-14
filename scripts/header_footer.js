@@ -23,6 +23,7 @@ class CommonHeader extends HTMLElement {
 					<a id="username" href="profile.html">Username</a>
 					<a href="profile.html">Profile</a>
 					<a href="edit_profile.html">Edit Profile</a>
+                	<a href="html/apartment_listing.html">Apartments</a>
 					<a id="sign_out_button" href="/index.html">Sign Out</a>
 				</div>
         	</div>

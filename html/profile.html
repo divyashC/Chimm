@@ -31,18 +31,19 @@
             <ul>
                 <li><a class="active" href="profile.html">Profile</a></li>
                 <li><a href="edit_profile.html">Edit Profile</a></li>
-                <li><a href="apartment_listing.html">Apartment Listing</a></li>
+                <li><a href="apartment_listing.html">Apartments</a></li>
             </ul>
         </div>
     </div>
 
     <div class="profile">
         <div class="profile_colored">
-            <img class="profile_picture_main" src="/assets/images/profile_picture_2.png" alt="Profile Picture">
+            <img class="profile_picture_main" id="dashboard_profile" src="/assets/images/profile_picture_2.png"
+                alt="Profile Picture">
             <div class="basic_info">
-                <h2>Name</h2>
-                <p>email@mail.com</p>
-                <p>+975 - 17171717</p>
+                <h2 id="name">Name</h2>
+                <p id="email">email@mail.com</p>
+                <p id="phone">+975 - 17171717</p>
             </div>
             <div class="stats">
                 <div class="left">
@@ -67,5 +68,6 @@
 <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-storage.js"></script>
 <script src="/scripts/script.js"></script>
+<script src="/scripts/profile.js"></script>
 
 </html>
