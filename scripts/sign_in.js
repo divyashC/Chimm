@@ -34,15 +34,32 @@ sign_in.addEventListener("submit", (e) => {
 
 			database_ref.child("users/" + user.uid).update(user_data);
 
+			var realtime_user_data = database_ref.child("users/" + user.uid);
+			// localStorage.setItem("user", JSON.stringify(realtime_user_data));
+
+			realtime_user_data
+				.get()
+				.then((snapshot) => {
+					if (snapshot.exists()) {
+						console.log(snapshot.val());
+						localStorage.setItem("user", JSON.stringify(snapshot.val()));
+					} else {
+						console.log("No data available");
+					}
+				})
+				.catch((error) => {
+					console.error(error);
+				});
+
 			alert("Signed In successfully");
 
 			setTimeout(() => {
 				sign_in.reset();
-			}, 2000);
+			}, 500);
 
 			setTimeout(() => {
 				window.location.href = "/html/profile.html";
-			}, 2000);
+			}, 1000);
 		})
 		.catch((error) => {
 			var error_code = error.code;

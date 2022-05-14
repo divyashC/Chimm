@@ -10,7 +10,7 @@ class CommonHeader extends HTMLElement {
 					<li><a class="link_effect" href="about_us.html">About Us</a></li>
 				</ul>
 			</nav>
-			<ul class="button">
+			<ul class="button" id="button">
 				<li><a class="sign_in" href="sign_in.html">Sign In</a></li>
 				<!-- <li><a class="sign_up button_effect" href="sign_up.html">Sign Up</a></li> -->
 			</ul>
@@ -21,7 +21,8 @@ class CommonHeader extends HTMLElement {
 				</div>
 				<div class="drop_down" id="drop_down_menu">
 					<a href="profile.html">Profile</a>
-					<a id="sign_out_button" href="/index.html">Sign Out</a>
+					<a href="edit_profile.html">Edit Profile</a>
+					<a id="sign_out_button" href="/index.html" onclick="sign_out()">Sign Out</a>
 				</div>
         	</div>
     	</header>`;

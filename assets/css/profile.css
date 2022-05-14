@@ -45,16 +45,15 @@
 	height: 100%;
 }
 
-.profile .top {
-	background: #f3f7f8;
-	height: 200px;
+.profile .profile_colored {
+	border-top: 200px solid #f3f7f8;
 }
 
-.profile img {
-	display: block;
+.profile .profile_picture_main {
 	position: absolute;
+	display: block;
+	top: 450px;
 	left: 50%;
-	top: 48%;
 	transform: translate(-50%, -50%);
 }
 
