@@ -82,6 +82,11 @@ hr {
 	margin-left: 20px;
 }
 
+.owner .owner_profile {
+	height: 80px;
+	width: 80px;
+}
+
 .owner .details {
 	display: flex;
 	flex-direction: column;

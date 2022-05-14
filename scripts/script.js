@@ -36,9 +36,15 @@ sign_out.addEventListener("click", (e) => {
 if (localStorage.getItem("user")) {
 	buttons.classList.add("hidden");
 	profile.classList.remove("hidden");
-	navbar_profile_container.src = ls_user_data.profilePicture;
-	const username_text = `Hi, ${ls_user_data.full_name.split(" ")[0]}`;
-	username_container.innerHTML = username_text;
+
+	if (ls_user_data.full_name != null) {
+		const username_text = `Hi, ${ls_user_data.full_name.split(" ")[0]}`;
+		username_container.innerHTML = username_text;
+	}
+
+	if (ls_user_data.profilePicture == null) {
+		navbar_profile_container.src = ls_user_data.profilePicture;
+	}
 }
 
 const dropdown = () => {
