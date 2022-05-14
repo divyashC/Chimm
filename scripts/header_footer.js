@@ -16,13 +16,14 @@ class CommonHeader extends HTMLElement {
 			</ul>
         	<div id="profile_group" class="profile hidden">
             	<div onclick="dropdown()" class="profile_container">
-					<p id="username" >Username</p>
+					<!-- <p id="username" class="username">Username</p> -->
 					<img id="profile_picture_image" class="profile_picture" src="/assets/images/profile_picture.png" alt="Profile Picture">
 				</div>
 				<div class="drop_down" id="drop_down_menu">
+					<a id="username" href="profile.html">Username</a>
 					<a href="profile.html">Profile</a>
 					<a href="edit_profile.html">Edit Profile</a>
-					<a id="sign_out_button" href="/index.html" onclick="sign_out()">Sign Out</a>
+					<a id="sign_out_button" href="/index.html">Sign Out</a>
 				</div>
         	</div>
     	</header>`;

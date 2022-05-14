@@ -29,20 +29,21 @@
                 <li><a class="link_effect" href="html/about_us.html">About Us</a></li>
             </ul>
         </nav>
-        <ul class="button">
+        <ul class="button" id="button">
             <li><a class="sign_in button_effect" href="html/sign_in.html">Sign In</a></li>
             <!-- <li><a class="sign_up button_effect" href="html/sign_up.html">Sign Up</a></li> -->
         </ul>
         <div id="profile_group" class="profile hidden">
+            <!-- <p id="username" class="username">Username</p> -->
             <div onclick="dropdown()" class="profile_container">
-                <p id="username">Username</p>
                 <img id="profile_picture_image" class="profile_picture" src="assets/images/profile_picture.png"
                     alt="Profile Picture">
             </div>
             <div class="drop_down" id="drop_down_menu">
+                <a id="username" href="html/profile.html">Username</a>
                 <a href="html/profile.html">Profile</a>
                 <a href="html/edit_profile.html">Edit Profile</a>
-                <a id="sign_out_button" href="index.html" onclick="sign_out()">Sign Out</a>
+                <a id="sign_out_button" href="index.html">Sign Out</a>
             </div>
         </div>
     </header>

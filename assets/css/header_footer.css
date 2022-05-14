@@ -44,6 +44,7 @@ header .button li {
 
 header .profile {
 	margin-left: auto;
+	margin-right: 20px;
 }
 
 header .profile .profile_container {
@@ -54,19 +55,19 @@ header .profile .profile_container {
 	margin: 3px 0;
 }
 
-.profile_container p {
+/* .profile_container p {
 	padding-right: 20px;
 	font-size: 1.1em;
 	color: #1e3f66;
-}
+} */
 
 .profile_container:hover {
 	cursor: pointer;
 }
 
 header .profile_picture {
-	height: 50px;
-	width: 50px;
+	height: 45px;
+	width: 45px;
 }
 
 header .profile_picture img:hover {
@@ -85,6 +86,11 @@ header .drop_down {
 	border-radius: 0 0 20px 20px;
 	z-index: 1;
 	display: none;
+	right: 5px;
+}
+
+header .drop_down a#username {
+	font-weight: bold;
 }
 
 header .drop_down a {
