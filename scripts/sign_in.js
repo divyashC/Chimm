@@ -35,27 +35,16 @@ sign_in.addEventListener("submit", (e) => {
 
 			database_ref.child("users/" + user.uid).update(user_data);
 
-			var realtime_user_data = database_ref.child("users/" + user.uid);
-			realtime_user_data.on("value", function (snapshot) {
-				var curr_user_data = snapshot.val();
-				storage
-					.ref("users/" + user.uid + "/profilePicture")
-					.getDownloadURL()
-					.then(function (url) {
-						curr_user_data.profilePicture = url;
-						localStorage.setItem("user", JSON.stringify(curr_user_data));
-					});
-			});
-
 			alert("Signed In successfully");
 
-			setTimeout(() => {
-				sign_in.reset();
-			}, 2000);
+			store_data(user);
 
-			setTimeout(() => {
+			if (localStorage.getItem("user")) {
+				sign_in.reset();
 				window.location.href = "/html/profile.html";
-			}, 2500);
+			} else {
+				reset_and_redirect();
+			}
 		})
 		.catch((error) => {
 			var error_code = error.code;
@@ -63,3 +52,24 @@ sign_in.addEventListener("submit", (e) => {
 			alert(error_code + " " + error_message);
 		});
 });
+
+const store_data = (user) => {
+	var realtime_user_data = database.ref().child("users/" + user.uid);
+	realtime_user_data.on("value", function (snapshot) {
+		var curr_user_data = snapshot.val();
+		storage
+			.ref("users/" + user.uid + "/profilePicture")
+			.getDownloadURL()
+			.then(function (url) {
+				curr_user_data.profilePicture = url;
+				localStorage.setItem("user", JSON.stringify(curr_user_data));
+			});
+	});
+};
+
+const reset_and_redirect = () => {
+	setTimeout(() => {
+		sign_in.reset();
+		window.location.href = "/html/profile.html";
+	}, 5000);
+};

@@ -30,7 +30,7 @@ sign_out.addEventListener("click", (e) => {
 	auth.signOut();
 	setTimeout(() => {
 		window.location.href = "/index.html";
-	}, 1500);
+	}, 2000);
 });
 
 if (localStorage.getItem("user")) {
@@ -46,6 +46,25 @@ if (localStorage.getItem("user")) {
 		navbar_profile_container.src = ls_user_data.profilePicture;
 	}
 }
+
+// auth.onAuthStateChanged((user) => {
+// 	if (user) {
+// 		buttons.classList.add("hidden");
+// 		profile.classList.remove("hidden");
+// 	} else {
+// 		buttons.classList.remove("hidden");
+// 		profile.classList.add("hidden");
+// 	}
+
+// 	if (ls_user_data.full_name != null) {
+// 		const username_text = `Hi, ${ls_user_data.full_name.split(" ")[0]}`;
+// 		username_container.innerHTML = username_text;
+// 	}
+
+// 	if (ls_user_data.profilePicture != null) {
+// 		navbar_profile_container.src = ls_user_data.profilePicture;
+// 	}
+// });
 
 const dropdown = () => {
 	const dropdown_menu = document.getElementById("drop_down_menu");
