@@ -33,7 +33,7 @@ sign_in.addEventListener("submit", (e) => {
 				last_login: Date.now(),
 			};
 
-			database_ref.child("users/" + user.uid).update(user_data);
+			database_ref.child("users/" + user.uid + "/user_data/").update(user_data);
 
 			alert("Signed In successfully");
 
@@ -54,11 +54,13 @@ sign_in.addEventListener("submit", (e) => {
 });
 
 const store_data = (user) => {
-	var realtime_user_data = database.ref().child("users/" + user.uid);
+	var realtime_user_data = database
+		.ref()
+		.child("users/" + user.uid + "/user_data");
 	realtime_user_data.on("value", function (snapshot) {
 		var curr_user_data = snapshot.val();
 		storage
-			.ref("users/" + user.uid + "/profilePicture")
+			.ref("users/" + user.uid + "/user_details" + "/profilePicture")
 			.getDownloadURL()
 			.then(function (url) {
 				curr_user_data.profilePicture = url;

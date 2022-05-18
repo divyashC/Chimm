@@ -64,9 +64,11 @@ sign_up.addEventListener("submit", (e) => {
 				last_login: Date.now(),
 			};
 
-			database_ref.child("users/" + user.uid).set(user_data);
+			database_ref.child("users/" + user.uid + "/user_data/").set(user_data);
 			if (
-				storage_ref.child("users/" + user_id + "/profilePicture").put(photo)
+				storage_ref
+					.child("users/" + user_id + "/user_details" + "/profilePicture")
+					.put(photo)
 			) {
 				store_data(user_id);
 			}
@@ -96,11 +98,13 @@ const validate_phone = (phone) => {
 };
 
 const store_data = (user_id) => {
-	var realtime_user_data = database.ref().child("users/" + user_id);
+	var realtime_user_data = database
+		.ref()
+		.child("users/" + user.uid + "/user_data");
 	realtime_user_data.on("value", function (snapshot) {
 		var curr_user_data = snapshot.val();
 		storage
-			.ref("users/" + user_id + "/profilePicture")
+			.ref("users/" + user_id + "/user_details" + "/profilePicture")
 			.getDownloadURL()
 			.then(function (url) {
 				curr_user_data.profilePicture = url;

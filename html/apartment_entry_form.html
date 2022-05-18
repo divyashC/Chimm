@@ -36,23 +36,23 @@
     </div>
 
     <div class="form">
-        <form>
+        <form id="apartment_entry_form">
             <div class="form_container">
                 <div class="top">
                     <h2>Owner's Details</h2>
                     <hr>
-                    <input type="text" id="name" placeholder="Name">
-                    <input type="email" id="email" placeholder="Email">
-                    <input type="text" id="phone" placeholder="Phone Number">
+                    <input type="text" id="owner_name" placeholder="Name">
+                    <input type="email" id="owner_email" placeholder="Email">
+                    <input type="text" id="owner_phone" placeholder="Phone Number">
                     <label for="photo">Proof of Ownership</label>
-                    <input type="file" id="file" placeholder="Proof of Ownership">
+                    <input type="file" id="proof_of_ownership" placeholder="Proof of Ownership">
                 </div>
                 <div class="bottom">
                     <h2>House Details</h2>
                     <hr>
                     <input type="text" id="total_surface_area" placeholder="Total Surface Area">
                     <input type="number" id="total_rooms" placeholder="Number of Rooms">
-                    <input type="number" id="toilet_bathrooms" placeholder="No. of Toilets & Bathrooms">
+                    <input type="number" id="toilet_bathroom" placeholder="No. of Toilets & Bathrooms">
                     <input type="number" id="number_of_balconies" placeholder="Number of Balconies">
                     <input type="text" id="floor" placeholder="Floor e.g. G, 1st, 2nd">
                     <div class="parking">
@@ -91,5 +91,6 @@
 <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-storage.js"></script>
 <script src="/scripts/script.js"></script>
+<script src="/scripts/apartment_entry_form.js"></script>
 
 </html>
