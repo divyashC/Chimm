@@ -41,33 +41,31 @@
             <img class="profile_image" id="profile_image" src="/assets/images/profile_picture.png" alt="Profile Image">
             <p id="display_name">Name</p>
             <div class="upload_avatar">
-                <a href="profile.html">Upload New Avatar</a>
+                <button id="upload_new_avatar_button">Upload New Avatar</button>
+                <form class='upload_avatar_form hidden' id="upload_new_avatar_form">
+                    <input type="file" name="profile_picture" id="profile_picture" accept="image/*">
+                </form>
             </div>
         </div>
         <hr class="hr_one">
         <div class="right">
             <div class="right_header">
                 <h2>Edit Profile</h2>
-                <div class="buttons">
-                    <div class="cancel_button">
-                        <a href="profile.html">Cancel</a>
-                    </div>
-                    <div class="save_button">
-                        <a href="profile.html">Save</a>
-                    </div>
-                </div>
             </div>
             <hr class="hr_two">
             <div class="form">
-                <form>
+                <form id="edit_form">
                     <input type="text" id="name" placeholder="Name"><br>
                     <input type="text" id="email" placeholder="Email"><br>
-                    <input type="text" id="phone" placeholder="Phone"><br>
+                    <input type="text" id="phone_no" placeholder="Phone"><br>
                     <label>Date of Birth</label><br>
                     <input type="date" id="dob" placeholder="Date of Birth"><br>
                     <input type="password" id="password" placeholder="Password"><br>
                     <input type="password" id="retype_password" placeholder="Retype Password">
-
+                    <div class="buttons">
+                        <input class="save_button" type="submit" value="Save">
+                        <input class="cancel_button" type="reset" value="Cancel">
+                    </div>
                 </form>
             </div>
         </div>

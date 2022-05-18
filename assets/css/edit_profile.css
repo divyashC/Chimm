@@ -50,11 +50,11 @@
 }
 
 .hr_one {
-	margin: 0 100px;
 	background-color: #1e3f66;
 	border: none;
 	height: 250px;
 	width: 3px;
+	margin: 0 80px;
 }
 
 .left {
@@ -83,25 +83,46 @@
 	padding-bottom: 40px;
 }
 
-.upload_avatar a {
-	margin: 0 0 20px;
-	padding: 10px 20px;
+.upload_avatar {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.upload_avatar button {
+	padding: 2px 10px;
 	border: 1px solid #ddd;
 	border-radius: 10px;
 	background: #1e3f66;
 	color: #fff;
-	height: 40px;
-	text-decoration: none;
+	height: 35px;
+	width: 180px;
+	font-size: 0.9em;
+	cursor: pointer;
+}
+
+.upload_avatar_form input {
+	width: 180px;
+	clear: both;
+	margin: 30px 0;
+	padding: 10px 15px;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+}
+
+.hidden {
+	display: none;
 }
 
 .right {
-	width: 40%;
+	width: 400px;
 }
 
 .right_header {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
 }
 
@@ -113,29 +134,27 @@
 .buttons {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
 }
 
-.cancel_button a {
-	margin: 0 8px;
-	padding: 8px 15px;
+.cancel_button {
+	padding: 2px 0;
 	border: 1px solid #ddd;
 	border-radius: 10px;
 	background: #1e3f66;
 	color: #fff;
 	height: 40px;
-	text-decoration: none;
 }
 
-.save_button a {
-	text-decoration: none;
+.save_button {
 	color: #1e3f66;
 	border: 1px solid #1e3f66;
 	border-radius: 10px;
-	padding: 8px 15px;
+	padding: 2px 0;
 	align-items: center;
 	font-weight: bold;
+	height: 40px;
 }
 
 .hr_two {
@@ -143,6 +162,7 @@
 	background-color: #1e3f66;
 	border: none;
 	height: 3px;
+	width: 400px;
 }
 
 .form {
@@ -155,7 +175,7 @@
 .form input {
 	width: 300px;
 	clear: both;
-	margin: 0 10px 20px;
+	margin-bottom: 20px;
 	padding: 15px 15px;
 	border: 1px solid #ddd;
 	border-radius: 10px;
@@ -167,4 +187,18 @@
 
 .form input[type="date"] {
 	margin-top: 15px;
+}
+
+.form input[type="submit"] {
+	width: 100px;
+	padding: 0;
+	margin-top: 20px;
+	margin-right: 25px;
+}
+
+.form input[type="reset"] {
+	width: 100px;
+	padding: 0;
+	margin-top: 20px;
+	margin-left: 25px;
 }
