@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Chimm - Terms & Conditions</title>
+    <title>Chimm - Apartment Listing</title>
     <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="/assets/css/header_footer.css">
@@ -44,44 +44,45 @@
                 <a href="apartment_entry_form.html">Add<i class="bi bi-plus-square"></i></a>
             </div>
         </div>
-        <div class="table_container">
+
+        <div class="table_container hidden" id="table_container"></div>
+
+        <!-- sample -->
+        <!-- <div class="table_container">
             <div class="table">
                 <table>
-                    <thead>
-                        <tr>
-                            <th>Sl. No.</th>
-                            <th>Building Name</th>
-                            <th>Location</th>
-                            <th>Rent</th>
-                            <th>Status</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Uncle Building</td>
-                            <td>Thimphu</td>
-                            <td>Nu.15,000</td>
-                            <td><button><i class="bi bi-trash3"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Aunty Building</td>
-                            <td>Phuentsholing</td>
-                            <td>Nu.10,000</td>
-                            <td><button><i class="bi bi-trash3"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>The Building</td>
-                            <td>Paro</td>
-                            <td>Nu.12,000</td>
-                            <td><button><i class="bi bi-trash3"></i></button></td>
-                        </tr>
-                    </tbody>
+                    <tr>
+                        <th>Sl. No.</th>
+                        <th>Building Name</th>
+                        <th>Location</th>
+                        <th>Rent</th>
+                        <th>Status</th>
+                    </tr>
+
+                    <tr>
+                        <td>1</td>
+                        <td>Uncle Building</td>
+                        <td>Thimphu</td>
+                        <td>Nu.15,000</td>
+                        <td><button><i class="bi bi-trash3"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Aunty Building</td>
+                        <td>Phuentsholing</td>
+                        <td>Nu.10,000</td>
+                        <td><button><i class="bi bi-trash3"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>The Building</td>
+                        <td>Paro</td>
+                        <td>Nu.12,000</td>
+                        <td><button><i class="bi bi-trash3"></i></button></td>
+                    </tr>
                 </table>
             </div>
-        </div>
+        </div> -->
     </div>
 
     <chimm-footer />
@@ -93,5 +94,6 @@
 <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-storage.js"></script>
 <script src="/scripts/script.js"></script>
+<script src="/scripts/apartment_listing.js"></script>
 
 </html>

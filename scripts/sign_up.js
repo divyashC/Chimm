@@ -69,18 +69,12 @@ sign_up.addEventListener("submit", (e) => {
 				storage_ref
 					.child("users/" + user_id + "/user_details" + "/profilePicture")
 					.put(photo)
-			) {
+			)
 				store_data(user_id);
-			}
 
 			alert("Signed Up successfully");
 
-			if (localStorage.getItem("user")) {
-				sign_in.reset();
-				window.location.href = "/html/profile.html";
-			} else {
-				reset_and_redirect();
-			}
+			reset_and_redirect();
 		})
 		.catch((error) => {
 			var error_code = error.code;
@@ -101,7 +95,7 @@ const store_data = (user_id) => {
 	var realtime_user_data = database
 		.ref()
 		.child("users/" + user.uid + "/user_data");
-	realtime_user_data.on("value", function (snapshot) {
+	realtime_user_data.once("value", function (snapshot) {
 		var curr_user_data = snapshot.val();
 		storage
 			.ref("users/" + user_id + "/user_details" + "/profilePicture")
@@ -117,5 +111,5 @@ const reset_and_redirect = () => {
 	setTimeout(() => {
 		sign_up.reset();
 		window.location.href = "/html/profile.html";
-	}, 5000);
+	}, 4000);
 };

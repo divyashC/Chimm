@@ -24,6 +24,7 @@ apartment_entry_form.addEventListener("submit", (e) => {
 	).value;
 	const rent_per_month = document.getElementById("rent_per_month").value;
 	const address = document.getElementById("address").value;
+	const building_name = document.getElementById("building_name").value;
 	const flat_number = document.getElementById("flat_number").value;
 	const additional_info = document.getElementById("additional_info").value;
 	const bool = document.getElementById("terms").checked;
@@ -44,54 +45,56 @@ apartment_entry_form.addEventListener("submit", (e) => {
 	seconds = seconds < 10 ? "0" + seconds : seconds;
 	var complete_time = hours + ":" + minutes + ":" + seconds + " " + ampm;
 
-	const apartment_id = "001";
-
 	if (bool == false) {
 		alert("Please accept the terms and conditions");
 	} else {
 		var database_ref = database.ref();
 		var storage_ref = storage.ref();
 
-		var apartment_data = {
-			owner_user_id: ls_user_data.user_id,
-			apartment_id: apartment_id,
-			owner_name: owner_name,
-			owner_phone: owner_phone,
-			owner_email: owner_email,
-			total_surface_area: total_surface_area,
-			total_rooms: total_rooms,
-			toilet_bathroom: toilet_bathroom,
-			number_of_balconies: number_of_balconies,
-			floor: floor,
-			parking: parking,
-			road_access: road_access,
-			rent_per_month: rent_per_month,
-			address: address,
-			flat_number: flat_number,
-			additional_info: additional_info,
-			entry_date: complete_date,
-			entry_time: complete_time,
-			timestamp: Date.now(),
-		};
+		var apt_database_ref = database.ref().child("apartments/");
+		apt_database_ref.once("value").then(function (snapshot) {
+			var apt_id =
+				snapshot.val() == null ? 1 : Object.keys(snapshot.val()).length + 1;
 
-		database_ref
-			.child("users/" + user_id + "/apartments/" + apartment_id)
-			.set(apartment_data);
-		storage_ref
-			.child(
-				"users/" +
-					user_id +
-					"/apartments/" +
-					apartment_id +
-					"/proof_of_ownership"
-			)
-			.put(proof_of_ownership);
+			var apartment_data = {
+				owner_user_id: ls_user_data.user_id,
+				apartment_id: apt_id,
+				owner_name: owner_name,
+				owner_phone: owner_phone,
+				owner_email: owner_email,
+				total_surface_area: total_surface_area,
+				total_rooms: total_rooms,
+				toilet_bathroom: toilet_bathroom,
+				number_of_balconies: number_of_balconies,
+				floor: floor,
+				parking: parking,
+				road_access: road_access,
+				rent_per_month: rent_per_month,
+				building_name: building_name,
+				address: address,
+				flat_number: flat_number,
+				additional_info: additional_info,
+				entry_date: complete_date,
+				entry_time: complete_time,
+				timestamp: Date.now(),
+			};
 
-		alert("Apartment added successfully");
+			database_ref
+				.child("users/" + user_id + "/apartments/" + apt_id)
+				.set(apartment_data);
+			database_ref.child("apartments/" + apt_id).set(apartment_data);
+			storage_ref
+				.child(
+					"users/" + user_id + "/apartments/" + apt_id + "/proof_of_ownership"
+				)
+				.put(proof_of_ownership);
 
-		// setTimeout(() => {
-		// 	apartment_entry_form.reset();
-		// 	window.location.href = "/html/apartment_listing.html";
-		// }, 5000);
+			alert("Apartment added successfully");
+		});
+
+		setTimeout(() => {
+			apartment_entry_form.reset();
+			window.location.href = "/html/apartment_listing.html";
+		}, 4000);
 	}
 });
