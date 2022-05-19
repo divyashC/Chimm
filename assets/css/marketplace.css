@@ -77,10 +77,8 @@ h1 {
 	margin-bottom: 5%;
 }
 
-.chimms .card a {
-	text-decoration: none;
-	padding: 0;
-	margin: 0;
+.chimms .card {
+	cursor: pointer;
 }
 
 .card {

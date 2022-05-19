@@ -76,6 +76,7 @@ apartment_entry_form.addEventListener("submit", (e) => {
 				additional_info: additional_info,
 				entry_date: complete_date,
 				entry_time: complete_time,
+				owner_profile_picture_url: ls_user_data.profile_picture_url,
 				timestamp: Date.now(),
 			};
 
