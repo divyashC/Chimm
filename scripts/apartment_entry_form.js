@@ -48,13 +48,13 @@ apartment_entry_form.addEventListener("submit", (e) => {
 	if (bool == false) {
 		alert("Please accept the terms and conditions");
 	} else {
-		var database_ref = database.ref();
-		var storage_ref = storage.ref();
-
 		var apt_database_ref = database.ref().child("apartments/");
 		apt_database_ref.once("value").then(function (snapshot) {
 			var apt_id =
 				snapshot.val() == null ? 1 : Object.keys(snapshot.val()).length + 1;
+
+			var database_ref = database.ref();
+			var storage_ref = storage.ref();
 
 			var apartment_data = {
 				owner_user_id: ls_user_data.user_id,
@@ -76,7 +76,7 @@ apartment_entry_form.addEventListener("submit", (e) => {
 				additional_info: additional_info,
 				entry_date: complete_date,
 				entry_time: complete_time,
-				owner_profile_picture_url: ls_user_data.profile_picture_url,
+				owner_profile_picture_url: ls_user_data.profilePicture,
 				timestamp: Date.now(),
 			};
 
@@ -91,11 +91,11 @@ apartment_entry_form.addEventListener("submit", (e) => {
 				.put(proof_of_ownership);
 
 			alert("Apartment added successfully");
-		});
 
-		setTimeout(() => {
-			apartment_entry_form.reset();
-			window.location.href = "/html/apartment_listing.html";
-		}, 4000);
+			setTimeout(() => {
+				apartment_entry_form.reset();
+				window.location.href = "/html/apartment_listing.html";
+			}, 4000);
+		});
 	}
 });

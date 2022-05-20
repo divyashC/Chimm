@@ -85,6 +85,7 @@ hr {
 .owner .owner_profile {
 	height: 80px;
 	width: 80px;
+	border-radius: 50%;
 }
 
 .owner .details {

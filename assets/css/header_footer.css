@@ -68,6 +68,7 @@ header .profile .profile_container {
 header .profile_picture {
 	height: 45px;
 	width: 45px;
+	border-radius: 50%;
 }
 
 header .profile_picture img:hover {

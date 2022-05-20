@@ -48,7 +48,6 @@ sign_up.addEventListener("submit", (e) => {
 		.createUserWithEmailAndPassword(email, password)
 		.then(() => {
 			var user = auth.currentUser;
-			var user_id = user.uid;
 
 			var database_ref = database.ref();
 			var storage_ref = storage.ref();
@@ -65,12 +64,13 @@ sign_up.addEventListener("submit", (e) => {
 			};
 
 			database_ref.child("users/" + user.uid + "/user_data/").set(user_data);
-			if (
-				storage_ref
-					.child("users/" + user_id + "/user_details" + "/profilePicture")
-					.put(photo)
-			)
-				store_data(user_id);
+			storage_ref
+				.child("users/" + user.uid + "/user_details" + "/profilePicture")
+				.put(photo);
+
+			setTimeout(() => {
+				store_data(user.uid);
+			}, 1000);
 
 			alert("Signed Up successfully");
 
@@ -94,7 +94,7 @@ const validate_phone = (phone) => {
 const store_data = (user_id) => {
 	var realtime_user_data = database
 		.ref()
-		.child("users/" + user.uid + "/user_data");
+		.child("users/" + user_id + "/user_data");
 	realtime_user_data.once("value", function (snapshot) {
 		var curr_user_data = snapshot.val();
 		storage
