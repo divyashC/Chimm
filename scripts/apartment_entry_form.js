@@ -51,7 +51,9 @@ apartment_entry_form.addEventListener("submit", (e) => {
 		var apt_database_ref = database.ref().child("apartments/");
 		apt_database_ref.once("value").then(function (snapshot) {
 			var apt_id =
-				snapshot.val() == null ? 1 : Object.keys(snapshot.val()).length + 1;
+				snapshot.val() == null
+					? 1
+					: snapshot.val()[snapshot.val().length - 1].apartment_id + 1;
 
 			var database_ref = database.ref();
 			var storage_ref = storage.ref();
@@ -80,9 +82,17 @@ apartment_entry_form.addEventListener("submit", (e) => {
 				timestamp: Date.now(),
 			};
 
+			var user_data = {
+				apartment_listed: ls_user_data.apartment_listed + 1,
+			};
+
+			ls_user_data.apartment_listed += 1;
+			localStorage.setItem("user", JSON.stringify(ls_user_data));
+
 			database_ref
 				.child("users/" + user_id + "/apartments/" + apt_id)
 				.set(apartment_data);
+			database_ref.child("users/" + user_id + "/user_data/").update(user_data);
 			database_ref.child("apartments/" + apt_id).set(apartment_data);
 			storage_ref
 				.child(

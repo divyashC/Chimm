@@ -42,7 +42,7 @@ if (localStorage.getItem("user")) {
 		username_container.innerHTML = username_text;
 	}
 
-	if (ls_user_data.profilePicture != null) {
+	if (ls_user_data.profilePicture != "") {
 		navbar_profile_container.src = ls_user_data.profilePicture;
 	}
 }

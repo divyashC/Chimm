@@ -35,6 +35,14 @@ realtime_apartment_data.once("value", function (snapshot) {
 
 const deleteApartment = (btn_id) => {
 	const [owner_user_id, apt_id] = btn_id.split(" ");
-	console.log(owner_user_id);
-	console.log(apt_id);
+	database
+		.ref()
+		.child("apartments/" + apt_id)
+		.remove();
+	database
+		.ref()
+		.child("users/" + owner_user_id + "/apartments/" + apt_id)
+		.remove();
+	alert("Apartment Deleted Successfully");
+	window.location.href = "apartment_listing.html";
 };

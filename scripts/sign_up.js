@@ -60,17 +60,18 @@ sign_up.addEventListener("submit", (e) => {
 				dob: dob,
 				gender: gender,
 				password: password,
+				apartment_rented: 0,
+				apartment_listed: 0,
+				profilePicture: "",
 				last_login: Date.now(),
 			};
+
+			localStorage.setItem("user", JSON.stringify(user_data));
 
 			database_ref.child("users/" + user.uid + "/user_data/").set(user_data);
 			storage_ref
 				.child("users/" + user.uid + "/user_details" + "/profilePicture")
 				.put(photo);
-
-			setTimeout(() => {
-				store_data(user.uid);
-			}, 1000);
 
 			alert("Signed Up successfully");
 
@@ -91,25 +92,25 @@ const validate_phone = (phone) => {
 	return phone.length == 8 ? true : false;
 };
 
-const store_data = (user_id) => {
-	var realtime_user_data = database
-		.ref()
-		.child("users/" + user_id + "/user_data");
-	realtime_user_data.once("value", function (snapshot) {
-		var curr_user_data = snapshot.val();
-		storage
-			.ref("users/" + user_id + "/user_details" + "/profilePicture")
-			.getDownloadURL()
-			.then(function (url) {
-				curr_user_data.profilePicture = url;
-				localStorage.setItem("user", JSON.stringify(curr_user_data));
-			});
-	});
-};
+// const store_data = (user_id) => {
+// 	var realtime_user_data = database
+// 		.ref()
+// 		.child("users/" + user_id + "/user_data");
+// 	realtime_user_data.once("value", function (snapshot) {
+// 		var curr_user_data = snapshot.val();
+// 		storage
+// 			.ref("users/" + user_id + "/user_details" + "/profilePicture")
+// 			.getDownloadURL()
+// 			.then(function (url) {
+// 				curr_user_data.profilePicture = url;
+// 				localStorage.setItem("user", JSON.stringify(curr_user_data));
+// 			});
+// 	});
+// };
 
 const reset_and_redirect = () => {
 	setTimeout(() => {
 		sign_up.reset();
 		window.location.href = "/html/profile.html";
-	}, 4000);
+	}, 5000);
 };

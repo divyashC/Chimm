@@ -80,7 +80,7 @@ realtime_apartment_data.once("value", function (snapshot) {
                                     <p>${apartment.owner_email}</p>
                                 </div>
                             </div>
-                            <div class="contact_button">
+                            <div class="contact_button" id="${apartment.owner_email}" onClick=sendEmail(this.id)>
                                 <a href="house_listing.html">Contact</a>
                             </div>
                         </div>
@@ -107,7 +107,7 @@ realtime_apartment_data.once("value", function (snapshot) {
                                     </tr>
                                     <tr class="toilet_bathroom">
                                         <td class="toilet_bathroom_title value_left">Toilet / Bathroom</td>
-                                        <td class="toilet_bathroom_value value_right">${apartment.total_bathroom}</td>
+                                        <td class="toilet_bathroom_value value_right">${apartment.toilet_bathroom}</td>
                                     </tr>
                                     <tr class="balconies">
                                         <td class="balconies_title value_left">Balconies</td>
@@ -155,8 +155,7 @@ realtime_apartment_data.once("value", function (snapshot) {
 	main_content.innerHTML = main_content_html;
 });
 
-// 	chimms.classList.remove("hidden");
-// 	chimms.innerHTML = apartments;
-// });
-
-// localStorage.removeItem("currAptId");
+const sendEmail = (email) => {
+	const email_address = email;
+	window.location.href = `mailto:${email_address}`;
+};

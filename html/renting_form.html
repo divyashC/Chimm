@@ -25,17 +25,17 @@
     <div class="container">
         <div class="form">
 
-            <form>
+            <form id="renting_form">
                 <h2>Tenant Details</h2>
                 <hr>
                 <input type="text" id="tenant_name" placeholder="Name">
-                <input type="text" id="tenant_number" placeholder="Number">
+                <input type="text" id="tenant_number" placeholder="Phone Number">
                 <input type="email" id="tenant_email" placeholder="Email Address">
                 <input type="text" id="tenant_occupation" placeholder="Occupation">
-                <select name="gender">
+                <select id="tenant_gender" name="gender">
                     <option class="dimmed" disabled selected>Select Gender *</option>
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
                 </select>
                 <input type="numnber" id="tenant_age" placeholder="Age">
                 <input type="text" id="tenant_heads" placeholder="Total Heads Residing">
@@ -55,68 +55,8 @@
 
         </div>
 
-        <div class="summary">
-            <div class="summary_card">
-                <div class="house_summary">
-                    <div class="section_1">
-                        <img src="/assets/images/house_summary_image.png" alt="House Image">
-                    </div>
-                    <div class="section_2">
-                        <h3>Lorem Ipsum</h3>
-                        <p>Lorem ipsum dolor sit amet</p>
-                        <p class="location"><i class="bi bi-geo-alt"></i> Location</p>
-                    </div>
-                </div>
-                <hr>
-                <div class="flat_summary">
-                    <h3>Flat Summary</h3>
-                    <table>
-                        <tr class="tsa">
-                            <td class="tsa-title value_left">Total Surface Area</td>
-                            <td class="tsa-value value_right">000000 sq. ft</td>
-                        </tr>
-                        <tr class="room">
-                            <td class="rooms-title value_left">Rooms</td>
-                            <td class="rooms-value value_right">3 BHK</td>
-                        </tr>
-                        <tr class="toilet_bathroom">
-                            <td class="toilet_bathroom_title value_left">Toilet / Bathroom</td>
-                            <td class="toilet_bathroom_value value_right">2</td>
-                        </tr>
-                        <tr class="balconies">
-                            <td class="balconies_title value_left">Balconies</td>
-                            <td class="balconies_value value_right">3</td>
-                        </tr>
-                        <tr class="parking">
-                            <td class="parking_title value_left">Parking</td>
-                            <td class="parking_value value_right">Yes</td>
-                        </tr>
-                        <tr class="floor">
-                            <td class="floor_title value_left">Floor</td>
-                            <td class="floor_value value_right">Ground Floor</td>
-                        </tr>
-                        <tr class="road">
-                            <td class="road_title value_left">Road Access</td>
-                            <td class="road_value value_right">Yes</td>
-                        </tr>
-                    </table>
-                </div>
+        <div class="summary" id="summary">
 
-                <hr>
-
-                <div class="rent">
-                    <table>
-                        <tr>
-                            <td class="rent_title">
-                                <h3>Total Rent Per Month</h3>
-                            </td>
-                            <td class="rent_value">
-                                <h3>Nu. 10000</h3>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
         </div>
     </div>
 
@@ -128,6 +68,7 @@
 <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-storage.js"></script>
-<script src="/scripts/sign_up.js"></script>
+<script src="/scripts/script.js"></script>
+<script src="/scripts/apartment_renting.js"></script>
 
 </html>
